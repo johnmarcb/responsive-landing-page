@@ -7,17 +7,168 @@ body {
 }
 .home-container {
   display: grid;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
   max-width: 1200px;
   margin: auto;
+  padding: 10px;
 }
 .home-container header {
-  background: url(https://wallpaperaccess.com/full/967674.jpg);
+  border-radius: 15px;
+  background: url(https://wallpaperaccess.com/full/334584.jpg);
   background-position-x: 0%;
   background-position-y: 0%;
-  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.header h1,
+.header p {
+  padding: 15px;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.647);
+}
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #21def3;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+a:hover {
+  color: #ffffff;
+  background: #21def3;
+  box-shadow: 0 0 10px #21def3, 0 0 40px #21def3, 0 0 80px #21def3;
+  transition-delay: 1s;
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #21def3);
+}
+
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #21def3);
+}
+
+a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #21def3);
+}
+
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #21def3);
+}
+
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.home-container section {
+  border-radius: 20px;
+  display: block;
+  background-color: #121212;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.home-container .dev-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 40px;
+}
+.home-container .dev-items .card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #101010db;
+}
+.web {
+  box-shadow: 0 0 8px #21def3, 0 0 8px #21def3, 0 0 8px #21def3, 0 0 8px #21def3;
+}
+.ios {
+  box-shadow: 0 0 8px #ff6afa, 0 0 8px #ff6afa, 0 0 8px #ff6afa, 0 0 8px #ff6afa;
+}
+.android {
+  box-shadow: 0 0 8px #17ffc1, 0 0 8px #17ffc1, 0 0 8px #17ffc1, 0 0 8px #17ffc1;
+}
+.card-container img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.home-container .contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.contact .contact-info-alt {
+  color: #121212;
+  background-color: #00c3a5;
+  border-radius: 10px;
+  width: 100%;
 }
 footer {
   display: flex;
   justify-content: space-between;
+}
+footer p span {
+  color: #03e9f4;
+}
+@media (max-width: 600px) {
+  .card-container img {
+    height: 120px;
+  }
 }
